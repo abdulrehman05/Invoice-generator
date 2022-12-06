@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Invoice Generator</title>  
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js" ></script>
+</head>
+
+<body>
+    <main>
+        <form  id="firstForm">
+            
+       <center><button id="generate" type="submit" data-html2canvas-ignore="true">Generate</button></center>
+        <div class="head">
+            <h1>Invoice</h1>
+            <div class="picturediv">
+            <img id="picture" height="100" width="100"  style="display: none" >
+            <label for="imginput" id="wholepicthing">Upload An Image
+                <input type="file"name="myImage" id="imginput" accept="image/png, image/gif, image/jpeg" required/>
+              </label></div>
+        </div>
+
+        <div class="info">
+            <div class="from">
+                <h2>From</h2>
+                <label for="name">Name</label><input required type="text"  id="name">
+                <label for="email">Email</label><input required type="email"  id="email">
+                <label for="address">Address</label><input required type="text"  id="address">
+                <label for="phone">Phone</label><input required type="tel"  id="phone">
+                <label for="businessno">Business Number</label><input required type="text"  id="businessno">
+            </div>
+
+            <div class="to">
+                <h2>To</h2>
+                <label for="toname">Name</label><input required type="text"  id="toname">
+                <label for="toemail">Email</label><input required type="email"  id="toemail">
+                <label for="toaddress">Address</label><input required type="text"  id="toaddress">
+                <label for="tophone">Phone</label><input required type="text"  id="tophone">
+                <label ></label>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="details">
+            <label for="invid">Invoice Id: </label><h3 id="invid">test</h3>
+            <label for="date">Date: </label><input required type="date" id="date">
+            <label for="terms">Terms: </label>
+            <select>
+                <option value="Due on Receipt">Due on Receipt</option>
+                <option value="Prepaid">Prepaid</option>
+            </select>
+        </div>
+        </form>
+        
+
+        <div class="table">
+            <hr>
+            <div class="grid-container">
+                <h3 class="description">Description</h3>
+                <h3 >Rate</h3>
+                <h3 class="qty">QTY</h3>
+                <h3 class="mount">Amount</h3>
+                <h3 class="tax">Tax</h3>
+            </div>
+            <hr>
+            <div class="item">
+                <div class="grid-container container">
+                    <button class="removebtn" data-html2canvas-ignore="true">Remove</button>
+                    <p type="text" class="description">Item #4 about something</p>
+                    <p type="number" class="rate">46</p>
+                    <p type="number" class="qty">10</p>
+                    <p type="number" class="amount">Rs. 460</p>
+                    <h3 type="check" class="tax">No</h3>
+                </div>
+            </div>
+            
+            <div>
+                <form class="grid-container additem" id="additem" data-html2canvas-ignore="true">
+                    <button id="addbtn" for="additem">Add</button>
+                    <input required type="text" class="description" id="description"></input>
+                    <input required type="number" id="rate"></input>
+                    <input required type="number" class="qty" id="qty"></input>
+                    <label id="amount"></label>
+                    <input type="checkbox" class="tax" id="tax"></input>
+                </form>
+            </div>
+        </div>
+        
+
+
+
+        <div class="total">
+            <h4 id="subtotal">Subtotal: <span class="value"></span></h4>
+            <h4 id="wholetax">Tax: <span class="value"></span></h4>
+            <h4 id="total">Total: <span class="value"></span></h4>
+            <h2 id="balancedue">Balance Due: <span class="value"></span></h2>
+        </div>
+
+
+    </main>
+
+    <script src="js.js"></script>
+</body>
+
+</html>

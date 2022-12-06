@@ -1,0 +1,220 @@
+*{margin:0;padding:0;
+font-family: Arial, Helvetica, sans-serif;}
+main{
+    max-width: 90%;
+    margin-inline: auto;
+}
+.head{
+    display: flex;
+    justify-content: space-between;
+    /* padding: 5px; */
+    margin-block: 30px;
+    font-size: 30px;
+}
+.head input{
+    background: transparent;
+    color: transparent;
+}
+.info{
+    display: flex;    
+    flex-wrap: wrap;
+}
+
+.info div{
+    flex: 1 1;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;    
+    justify-content: center;
+    min-width: 300px;
+}
+.info div label{
+    flex: 1 1 20%;
+    padding: 10px;    
+    margin: 10px;
+    box-sizing: border-box;    
+    min-width: 100px;    
+}
+.info div input{
+    flex: 1 1 60%;
+    padding: 10px;
+    margin: 10px;
+    box-sizing: border-box;
+    min-width: 30px;
+    height: 40px;
+}
+.info div h2{
+    flex: 1 1 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.details{
+    flex: 1 1;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;    
+    justify-content: center;
+    width: 50%;
+}
+.details label{
+    flex: 1 1 20%;
+    padding: 10px;    
+    margin: 10px;
+    box-sizing: border-box;    
+    min-width: 100px;    
+}
+.details input{
+    flex: 1 1 60%;
+    padding: 10px;
+    margin: 10px;
+    box-sizing: border-box;
+    min-width: 30px;
+    height: 40px;
+}
+#invid{
+    flex: 1 1 60%;
+    padding: 10px;
+    margin: 10px;
+    box-sizing: border-box;
+    min-width: 30px;
+    height: 40px;
+}
+select{
+    flex: 1 1 60%;
+    padding: 10px;
+    margin: 10px;
+    box-sizing: border-box;
+    min-width: 30px;
+    height: 40px;
+}
+.grid-container{
+    display: grid;
+    grid-template-columns: 5% 30% 20% 20% 20% 5%;
+    grid-gap: 10px;
+    width: 95%;
+    box-sizing: border-box;
+}
+.grid-container{
+    text-align: right;
+}
+.grid-container .description{
+    grid-column: 2/3;
+    text-align: left;
+    padding-block: 10px;
+}
+.grid-container p{
+    padding-block: 10px;
+}
+.grid-container h3{
+    padding-block: 10px;
+}
+.grid-container button{
+    height: 30px;
+    margin-block: 5px;
+    
+    font-size: 11px;
+}
+
+.total{
+    text-align: right;
+    width:100%;
+}
+.hidden{display: none;}
+.info div .text{
+    flex: 1 1 100%;
+    display: flex;
+    justify-items: right;
+    align-items: center;
+    padding: 0%;
+
+}
+.info div .text .values{
+    width: 100%;
+    display: inline;
+    text-align: right;
+}
+.additem{
+    margin-block: 10px;
+}
+
+.total{
+    padding: 40px;
+    box-sizing: border-box;
+    font-size: 1.05em;
+}
+
+
+
+
+
+hr{
+    /* width: 10px; */
+    border: 1px solid black;
+}
+
+
+#generate{
+    padding: 15px;
+    margin: 20px;
+    margin-inline: auto;
+}
+
+button{
+    
+    background: black;
+    border: 1px solid white;
+    color: white;
+    font-size: 18px;
+}
+button:hover{
+    background: white;
+    border: 1px solid black;
+    color: black;
+    cursor: pointer;
+}
+
+
+
+
+
+
+@media screen and (max-width:950px) {
+    .grid-container button{
+        font-size: 8px;
+    }   
+}
+
+@media screen and (max-width:600px) {
+     
+
+
+.grid-container{
+    display: grid;
+    grid-template-columns: 10% 25% 10% 10% 25% 10%;
+    grid-gap: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+.grid-container{
+    text-align: right;
+}
+.grid-container .description{
+    grid-column: 2/3;
+    text-align: left;
+    padding-block: 10px;
+}
+.grid-container p{
+    padding-block: 10px;
+}
+.grid-container h3{
+    padding-block: 10px;
+}
+.grid-container button{
+    height: 30px;
+    margin-block: 5px;
+}
+main{
+    padding: 0;
+    margin: 0;
+}
+}
